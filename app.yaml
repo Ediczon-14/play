@@ -1,1 +1,10 @@
 runtime: nodejs16
+
+handlers:
+- url: /index.html
+  static_dir: index.html
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
